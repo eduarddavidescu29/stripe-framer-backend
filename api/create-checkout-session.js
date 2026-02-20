@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       line_items: [
         { price: "price_XXXX", quantity: 1 }
       ],
-      return_url: "https://siteultau.ro/thank-you?session_id={CHECKOUT_SESSION_ID}",
+      return_url: "https://adnv.ro/ty-quiz?session_id={CHECKOUT_SESSION_ID}",
     });
 
     res.status(200).json({ clientSecret: session.client_secret });
