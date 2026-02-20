@@ -12,7 +12,7 @@ export default async function handler(req, res) {
       ui_mode: "embedded",
       mode: "payment",
       line_items: [
-        { price: "price_XXXX", quantity: 1 }
+        { price: "price_1SurdrHJwxkdxPOOI54XsZmA", quantity: 1 }
       ],
       return_url: "https://adnv.ro/ty-quiz?session_id={CHECKOUT_SESSION_ID}",
     });
