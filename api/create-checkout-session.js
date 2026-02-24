@@ -36,7 +36,7 @@ export default async function handler(req, res) {
   ui_mode: "embedded",
   mode: "payment",
   line_items: [{ price: "price_1SurdrHJwxkdxPOOI54XsZmA", quantity: 1 }],
-  return_url: "https://adnv.ro/checkout-quiz?session_id={CHECKOUT_SESSION_ID}",
+  return_url: "https://adnv.ro/webinar-obiectii-pret/thank-you-bilet-gold?session_id={CHECKOUT_SESSION_ID}",
 })
 
     return res.status(200).json({ clientSecret: session.client_secret })
