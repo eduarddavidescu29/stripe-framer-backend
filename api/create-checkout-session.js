@@ -33,11 +33,11 @@ export default async function handler(req, res) {
 
   try {
     const session = await stripe.checkout.sessions.create({
-      ui_mode: "embedded",
-      mode: "payment",
-      line_items: [{ price: "price_1SurdrHJwxkdxPOOI54XsZmA", quantity: 1 }],
-      // fără return_url → Stripe folosește ce ai setat în Dashboard
-    })
+  ui_mode: "embedded",
+  mode: "payment",
+  line_items: [{ price: "price_1SurdrHJwxkdxPOOI54XsZmA", quantity: 1 }],
+  return_url: "https://adnv.ro/checkout-quiz?session_id={CHECKOUT_SESSION_ID}",
+})
 
     return res.status(200).json({ clientSecret: session.client_secret })
   } catch (err) {
